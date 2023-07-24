@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="logotipo.css">
-    <link rel="stylesheet" href="encriptar.css">
-    <link rel="stylesheet" href="encriptado.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logotipo.css">
+    <link rel="stylesheet" href="css/encriptar.css">
+    <link rel="stylesheet" href="css/encriptado.css">
     <title>Encriptador de texto</title>
 </head>
 
@@ -26,16 +26,19 @@
                 <p class="informacion">Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="botones">
-                <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-                <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+                <button class="btn-encriptar" type="button" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" type="button" onclick="btnDesencriptar()">Desencriptar</button>
             </div>
         </div>
         <div class="encriptado">
-            <img class="img-muñeco" src="img/Muñeco.png" alt="Muñeco" id="muñeco">
-            <div class="mensaje-encriptado" id="mensaje-encriptado">
+            <div class="mensaje-encriptado">
+                <img class="img-muñeco" id="img-muñeco" src="img/Muñeco.png" alt="Muñeco">
                 <h2 class="titulo-mensaje" id="titulo-mensaje">Ningun mensaje fue encontrado</h2>
-                <p class="parrafo-mensaje" id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-                <!-- <textarea class="mensaje" id="mensaje" name="mensaje" cols="30" rows="10"></textarea> -->
+                <p class="parrafo-mensaje" id="parrafo-mensaje">Ingresa el texto que deseas encriptar o desencriptar</p>
+                <div class="desencriptado">
+                    <textarea class="area-mensaje" cols="30" rows="10"></textarea>
+                    <button class="btn-copiar" type="button" onclick="copiar()">Copiar</button>
+                </div>
             </div>
         </div>
     </div>
